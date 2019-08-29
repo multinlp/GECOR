@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--Thanks to Pranav Rajpurkar (https://rajpurkar.github.io/) and TweetQA (https://github.com/TweetQA/tweetqa.github.io) for this great leaderboard template!
+We made some modifications to our paper GECOR.-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>GECOR: An End-to-End Generative Ellipsis and Co-reference Resolution Model for Task-Oriented Dialogue</title>
+    <meta name="description" content="Ellipsis and co-reference are common and ubiquitous especially in multi-turn dialogues. 
+	In this paper, we treat the resolution of ellipsis and co-reference in dialogue as a problem of generating omitted or referred 
+	expressions from the dialogue context. We therefore propose a unified end-to-end Generative Ellipsis and CO-reference Resolution model 
+	(GECOR) in the context of dialogue. The model can generate a new pragmatically complete user utterance by alternating the generation 
+	and copy mode for each user utterance. A multi-task learning framework is further proposed to integrate the GECOR into an end-to-end 
+	task-oriented dialogue. In order to train both the GECOR and the multi-task learning framework, we manually construct a new dataset on 
+	the basis of the public dataset CamRest676 with both ellipsis and co-reference annotation. On this dataset, intrinsic evaluations on the 
+	resolution of ellipsis and co-reference show that the GECOR model significantly outperforms the sequence-to-sequence (seq2seq) baseline 
+	model in terms of EM, BLEU and F1 while extrinsic evaluations on the downstream dialogue task demonstrate that our multi-task learning 
+	framework with GECOR achieves a higher success rate of task completion than TSCP, a state-of-the-art end-to-end task-oriented dialogue model.">
+    <meta name="keywords" content="GECOR: An End-to-End Generative Ellipsis and Co-reference Resolution Model for Task-Oriented Dialogue">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta property="og:image" content="image/logo1.png">
+    <link rel="icon" href="image/favicon1.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" id="topNavbar" role="navigation">
+      <div class="container clearfix" id="navContainer">
+        <div class="rightNav">
+          <div class="collapseDiv">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+          </div>
+        </div>
+        <div class="leftNav">
+          <div class="brandDiv">
+            <a class="navbar-brand" href="https://multinlp.github.io/GECOR/">GECOR</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="header">
+        <div id="header-desc">
+            <!-- <p style="font-size:10rem; color:whitesmoke"><b>GECOR</b></p>
+            <p style="font-size:3.5rem; color: white">Monolingual, Multilingual and Cross-lingual Reading Comprehension on Novels</p> -->
+            <p style="font-size:10rem; "><b>GECOR</b></p>
+            <p style="font-size:3rem; ">An End-to-End Generative Ellipsis and Co-reference Resolution Model for Task-Oriented Dialogue</p>
+
+        </div>
+    </div>
+
+
+    <div class="cover" id="contentCover">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 thumb">
+            <div class="infoCard">
+              <div class="infoBody">
+			  
+			  
+			  
+			  
+                <div class="infoHeadline">
+                  <h2>Abstract</h2>
+                </div>
+                <p>
+                   Ellipsis and co-reference are common and ubiquitous especially in multi-turn dialogues. In this paper, we treat the resolution of ellipsis and co-reference in dialogue as a problem of generating omitted or referred expressions from the dialogue context. We therefore propose a unified end-to-end Generative Ellipsis and CO-reference Resolution model (GECOR) in the context of dialogue. The model can generate a new pragmatically complete user utterance by alternating the generation and copy mode for each user utterance. A multi-task learning framework is further proposed to integrate the GECOR into an end-to-end task-oriented dialogue. In order to train both the GECOR and the multi-task learning framework, we manually construct a new dataset on the basis of the public dataset CamRest676 with both ellipsis and co-reference annotation. On this dataset, intrinsic evaluations on the resolution of ellipsis and co-reference show that the GECOR model significantly outperforms the sequence-to-sequence (seq2seq) baseline model in terms of EM, BLEU and F1 while extrinsic evaluations on the downstream dialogue task demonstrate that our multi-task learning framework with GECOR achieves a higher success rate of task completion than TSCP, a state-of-the-art end-to-end task-oriented dialogue model.
+                </p>
+
+                <p>
+                <a class="btn actionBtn" href="https://arxiv.org/abs/GECOR" target="_blank">GECOR Paper (Quan et al. EMNLP '19)</a>
+                </p>
+                <hr>
+
+
+
+
+
+                <div class="infoHeadline">
+                  <h2> Examples of ellipsis and co-reference resolution</h2>
+                </div>
+                <p>
+                <img src="image/GECOR_example.png" class="img-responsive mx-auto d-block"/>
+                </p>
+                <hr>
+
+
+
+
+
+
+                <div class="infoHeadline">
+                  <h2>Getting Started</h2>
+                </div>
+
+                <p>The new dataset and the code of our models are available:</p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="btn actionBtn inverseBtn" href="https://github.com/terryqj0107/GECOR" download>GECOR model and the new dataset</a></li>
+                  </ul>
+                </p>
+
+
+
+
+
+
+                <div class="infoHeadline">
+                  <h2>License</h2>
+                </div>
+
+                <p>
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
+                </p>
+
+
+
+				
+                
+                <hr>
+
+                <div class="infoHeadline">
+                  <h2>Have Questions?</h2>
+                </div>
+                <p>For any issue, email to <a href="mailto:dyxiong@suda.edu.cn" target="_blank">dyxiong@suda.edu.cn</a>. <br>
+                  <!--For submission issues, please email Hong Wang at <a href="mailto:hongwang600@cs.ucsb.edu" target="_blank">hongwang600@cs.ucsb.edu</a>. -->
+                </p>
+                <p>
+                </p>                
+                <hr>
+
+                </div>
+            </div>
+          </div>
+
+
+
+		<div class="infoHeadline">
+			  <h2>The GECOR Model</h2>
+		</div>
+		<p>
+		   <img src="image/GECOR_model.png" class="img-responsive mx-auto d-block" width=680/>
+		</p>
+		<br/>
+			
+			
+		<div class="infoHeadline">
+			 <h2>Task-Oriented Dialogue with GECOR</h2>
+		</div>
+		<p>
+		   <img src="image/GECOR_with_dialogue.png" class="img-responsive mx-auto d-block" width=680/>
+		</p>
+		<br/>
+
+
+
+		<div class="infoHeadline">
+		  <h2>An example of the ellipsis / co-reference annotation</h2>
+		</div>
+		<p>
+		<img src="image/annotation_example.png" class="img-responsive mx-auto d-block"/>
+		</p>
+		<br/>
+		<!-- <p><center>The distribution of trigram prefixes of questions in GECOR. </center></p> -->
+		<p>
+		  The CamRest676 dataset contains 676 dialogues, with 2,744 user utterances. After annotation, 1,174 ellipsis versions and 1,209 co-reference versions are created from the 2,744 user utterances. 1,331 incomplete utterances are created that they are an either ellipsis or co-reference version. 1,413 of the 2,744 user utterances are complete and not amenable to change. No new versions are created from these 1,413 utterances.
+		</p>
+		<br/>
+
+
+
+
+		<div class="infoHeadline">
+		  <h2>Citations</h2>
+		</div>
+
+		<p>If you use the source codes or datasets included here in your work, please cite our paper. The bibtex is listed below:</p>
+
+		<pre><code>@inproceedings{quan2019GECOR,<br/>title={GECOR: An End-to-End Generative Ellipsis and Co-reference Resolution Model for Task-Oriented Dialogue},<br/>author={Jun Quan, Deyi Xiong, Bonnie Webber and Changjian Hu},<br/>booktitle={Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing},<br/>year={2019}}</code></pre>
+		
+
+         
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-static-bottom footer">
+      <div class="container clearfix">
+        <div class="rightNav">
+          <div>
+            <ul class="nav navbar-nav navbar-right">
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+
+</html>
